@@ -25,4 +25,10 @@ class LogGenerator: NSObject {
     public func createLog(level: DebugLevel, class: AnyClass, type: OperateType, content: NSString, function: NSString, line: NSString) {
         
     }
+    
+    private func getDate(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy:MM:dd HH:mm:ss"
+        return dateFormatter.string(from: date)
+    }
 }
