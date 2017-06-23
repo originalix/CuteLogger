@@ -22,7 +22,7 @@ enum OperateType {
 
 class LogGenerator: NSObject {
     
-    public func createLog(time: Date, level: DebugLevel, class: AnyClass, type: OperateType, content: NSString) {
+    public func createLog(level: DebugLevel, class: AnyClass, type: OperateType, content: NSString, function: NSString, line: NSString) {
         
     }
 }
