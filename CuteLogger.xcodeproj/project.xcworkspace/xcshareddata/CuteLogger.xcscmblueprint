@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BDD3F6E21D115A95E17D8AE53382C59B3250D0BC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "BDE96FD7A339B70903489AA99F1FF8CE2D76D98E" : 9223372036854775807,
+    "BDD3F6E21D115A95E17D8AE53382C59B3250D0BC" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0156E171-DF24-41B1-910A-C0AE81DA35D6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "BDE96FD7A339B70903489AA99F1FF8CE2D76D98E" : "",
+    "BDD3F6E21D115A95E17D8AE53382C59B3250D0BC" : "CuteLogger\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CuteLogger",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CuteLogger.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:originalix\/CuteLogger.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BDD3F6E21D115A95E17D8AE53382C59B3250D0BC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.lnts.cn:lixiao\/lnts-foundation.ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BDE96FD7A339B70903489AA99F1FF8CE2D76D98E"
+    }
+  ]
+}

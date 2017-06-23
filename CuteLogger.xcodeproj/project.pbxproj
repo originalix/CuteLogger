@@ -14,6 +14,8 @@
 		56135E301EFCCD3A005BCFBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56135E2E1EFCCD3A005BCFBB /* LaunchScreen.storyboard */; };
 		56135E3B1EFCCD3A005BCFBB /* CuteLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56135E3A1EFCCD3A005BCFBB /* CuteLoggerTests.swift */; };
 		56135E461EFCCD3B005BCFBB /* CuteLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56135E451EFCCD3A005BCFBB /* CuteLoggerUITests.swift */; };
+		56135E561EFCE016005BCFBB /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56135E551EFCE016005BCFBB /* ExampleViewController.swift */; };
+		56135E581EFCE0AB005BCFBB /* LogGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56135E571EFCE0AB005BCFBB /* LogGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		56135E411EFCCD3A005BCFBB /* CuteLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuteLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56135E451EFCCD3A005BCFBB /* CuteLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuteLoggerUITests.swift; sourceTree = "<group>"; };
 		56135E471EFCCD3B005BCFBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56135E551EFCE016005BCFBB /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		56135E571EFCE0AB005BCFBB /* LogGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		56135E241EFCCD3A005BCFBB /* CuteLogger */ = {
 			isa = PBXGroup;
 			children = (
+				56135E531EFCDFFB005BCFBB /* Example */,
+				56135E541EFCDFFB005BCFBB /* resource */,
 				56135E251EFCCD3A005BCFBB /* AppDelegate.swift */,
 				56135E271EFCCD3A005BCFBB /* ViewController.swift */,
 				56135E291EFCCD3A005BCFBB /* Main.storyboard */,
@@ -123,6 +129,22 @@
 				56135E471EFCCD3B005BCFBB /* Info.plist */,
 			);
 			path = CuteLoggerUITests;
+			sourceTree = "<group>";
+		};
+		56135E531EFCDFFB005BCFBB /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				56135E551EFCE016005BCFBB /* ExampleViewController.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		56135E541EFCDFFB005BCFBB /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				56135E571EFCE0AB005BCFBB /* LogGenerator.swift */,
+			);
+			path = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +286,8 @@
 			files = (
 				56135E281EFCCD3A005BCFBB /* ViewController.swift in Sources */,
 				56135E261EFCCD3A005BCFBB /* AppDelegate.swift in Sources */,
+				56135E581EFCE0AB005BCFBB /* LogGenerator.swift in Sources */,
+				56135E561EFCE016005BCFBB /* ExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
