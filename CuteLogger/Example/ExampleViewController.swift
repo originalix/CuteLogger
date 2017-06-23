@@ -13,7 +13,7 @@ class ExampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let log = LogGenerator().createLog(level: .warning, targetClass: self.classForCoder, type: .native, content: "this is a debug log", function: #function, line: #line)
+        let log = LogGenerator().createLog(level: .error, targetClass: self.classForCoder, type: .native, content: "this is a debug log", function: #function, line: #line)
         print(log)
     }
 

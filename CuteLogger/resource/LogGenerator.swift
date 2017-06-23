@@ -24,8 +24,26 @@ class LogGenerator: NSObject {
     
     public func createLog(level: DebugLevel, targetClass: AnyClass, type: OperateType, content: String, function: String, line: Int)
     -> String {
-        let log: String = Date().toString() + "|" + targetClass.className + "|" + content + "|" + function + "|"
+        let lineStr = String.init(format: "line:%d", line)
+        let levelStr = levelToString(level: level)
+        let separator = "|"
+        let log: String = Date().toString() + separator + levelStr + separator + targetClass.className + separator + function + separator + lineStr + separator + content
         return log
+    }
+    
+    private func levelToString(level: DebugLevel) -> String {
+        var levelStr = "Debug"
+        switch level {
+            case .debug:
+                levelStr = "Debug"
+            case .info:
+                levelStr = "Info"
+            case .warning:
+                levelStr = "Warning"
+            case .error:
+                levelStr = "Error"
+        }
+        return levelStr
     }
 }
 
