@@ -23,14 +23,17 @@ class ExampleViewController: UIViewController {
     }
 
     func testFile() {
-//        let _ = FileTest.createFilePath(fileName: "test")
-//        let log = LogGenerator().debug(targetClass: self.classForCoder, content: "测试Log!!!")
+        let path = FileTest.createFilePath(fileName: "test")
+//        let log = LogGenerator().debug(targetClass: self.classForCoder, content: "测试Log")
 //        let data = log.data(using: .utf8)!
-//        if (FileTest.writeFile(fileName: "test", data: data as NSData)) {
-//            print("写入文件成功")
-//        } else {
-//            print("写入文件失败")
-//        }
+//        FileTest.writeFile(fileName: "test", data: data as NSData)
+        print(path!)
+        for i in 0...100 {
+            let str = String.init(format: "第 %d 个 Log!", i)
+            let log = LogGenerator().debug(targetClass: self.classForCoder, content: str)
+            let data = log.data(using: .utf8)!
+            FileTest.updateFile(fileName: "test", data: data)
+        }
         print(FileTest.getCachePath())
     }
     

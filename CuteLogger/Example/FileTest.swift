@@ -172,5 +172,19 @@ class FileTest: NSObject {
         
         return data.write(toFile: filePath, atomically: true)
     }
+    
+    class func updateFile(fileName: String, data: Data){
+        
+        guard let filePath = fileExistsWithFileName(fileName: fileName) else {
+            let _ = createFilePath(fileName: fileName)
+            let _ = writeFile(fileName: fileName, data: data as NSData)
+            return
+        }
+        
+        let fileHandle: FileHandle = FileHandle.init(forUpdatingAtPath: filePath)!
+        fileHandle.seekToEndOfFile()
+        fileHandle.write(data)
+        fileHandle.closeFile()
+    }
 
 }
