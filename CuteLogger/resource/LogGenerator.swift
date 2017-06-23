@@ -22,9 +22,9 @@ enum OperateType {
 
 class LogGenerator: NSObject {
     
-    public func createLog(level: DebugLevel, targetClass: AnyClass, type: OperateType, content: NSString, function: NSString, line: NSString)
+    public func createLog(level: DebugLevel, targetClass: AnyClass, type: OperateType, content: String, function: String, line: Int)
     -> String {
-        let log: String = Date().toString() + "|" + targetClass.className + "|" + content + "|" + function + "|" + line
+        let log: String = Date().toString() + "|" + targetClass.className + "|" + content + "|" + function + "|"
         return log
     }
 }
@@ -32,7 +32,7 @@ class LogGenerator: NSObject {
 extension Date {
     func toString() -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM dd yyyy"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return dateFormatter.string(from: self)
     }
 }
