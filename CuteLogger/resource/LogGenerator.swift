@@ -22,12 +22,17 @@ enum OperateType {
 
 class LogGenerator: NSObject {
     
-    public func createLog(level: DebugLevel, targetClass: AnyClass, type: OperateType, content: String, function: String, line: Int)
+    public func debug(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) -> String {
+        return createLog(level: .debug, targetClass: targetClass, type: .native, content: content, line, function)
+    }
+    
+    public func createLog(level: DebugLevel, targetClass: AnyClass, type: OperateType, content: String,  _ line: Int = #line, _ function: String = #function)
     -> String {
         let lineStr = String.init(format: "line:%d", line)
         let levelStr = levelToString(level: level)
         let separator = "|"
-        let log: String = Date().toString() + separator + levelStr + separator + targetClass.className + separator + function + separator + lineStr + separator + content
+        let classSeparator = "_"
+        let log: String = Date().toString() + separator + levelStr + separator + targetClass.className + classSeparator + function + classSeparator + lineStr + separator + content
         return log
     }
     
