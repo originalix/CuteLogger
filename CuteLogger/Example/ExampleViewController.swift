@@ -14,13 +14,26 @@ class ExampleViewController: UIViewController {
         super.viewDidLoad()
         
         let _ = LogGenerator().createLog(level: .error, targetClass: self.classForCoder, type: .native, content: "this is a debug log")
-        testLog()
+//        testLog()
+        testFile()
     }
     
     func testLog() {
         let _ = LogGenerator().debug(targetClass: self.classForCoder, content: "测试Log!!!")
     }
 
+    func testFile() {
+//        let _ = FileTest.createFilePath(fileName: "test")
+//        let log = LogGenerator().debug(targetClass: self.classForCoder, content: "测试Log!!!")
+//        let data = log.data(using: .utf8)!
+//        if (FileTest.writeFile(fileName: "test", data: data as NSData)) {
+//            print("写入文件成功")
+//        } else {
+//            print("写入文件失败")
+//        }
+        print(FileTest.getCachePath())
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
