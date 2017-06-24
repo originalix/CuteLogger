@@ -56,6 +56,15 @@ class LogStorage: NSObject, LogStorageProtocol {
         return fileExists(path: filePath) ? filePath : nil
     }
     
+    private func createDir(dir: String) -> Bool {
+        do {
+            try fileManager().createDirectory(at: URL.init(fileURLWithPath: dir, isDirectory: true), withIntermediateDirectories: true, attributes: nil)
+        } catch {
+            return false
+        }
+        
+        return true
+    }
     
     
 }
