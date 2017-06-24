@@ -34,4 +34,28 @@ class LogStorage: NSObject, LogStorageProtocol {
         return cacheDir
     }
     
+    private func fileManager() -> FileManager {
+        return FileManager.default
+    }
+    
+    private func dirExists(dir: String) -> Bool {
+        return fileManager().fileExists(atPath: dir)
+    }
+    
+    private func fileExists(path: String) -> Bool {
+        return dirExists(dir: path)
+    }
+    
+    private func fileExists(with fileName: String) -> String? {
+        let cachePath = getCachePath()
+        if (!dirExists(dir: cachePath)) {
+            return nil
+        }
+        
+        let filePath = cachePath + fileName
+        return fileExists(path: filePath) ? filePath : nil
+    }
+    
+    
+    
 }
