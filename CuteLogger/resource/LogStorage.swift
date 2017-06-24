@@ -66,5 +66,22 @@ class LogStorage: NSObject, LogStorageProtocol {
         return true
     }
     
+    private func createFilePath(fileName: String) -> String? {
+        let cachePath = getCachePath()
+        if (!dirExists(dir: cachePath) && !createDir(dir: cachePath)) {
+            return nil
+        }
+        
+        let filePath = cachePath + fileName
+        if fileExists(path: filePath) {
+            do {
+                try fileManager().removeItem(atPath: filePath)
+            } catch {
+                return nil
+            }
+        }
+        
+        return filePath
+    }
     
 }
