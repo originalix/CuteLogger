@@ -9,6 +9,11 @@
 import UIKit
 
 protocol LogStorageProtocol {
+    func getCachePath() -> String
+    func deleteFile(with name: String) -> Bool
+    func cleanCache() -> Bool
+    func readFile(with name: String) -> NSData?
+    func writeFile(with name:String, data: Data)
     
 }
 
