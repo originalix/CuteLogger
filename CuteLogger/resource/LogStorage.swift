@@ -8,6 +8,16 @@
 
 import UIKit
 
-class LogStorage: NSObject {
+protocol LogStorageProtocol {
+    
+}
 
+class LogStorage: NSObject {
+    
+    let CACHEPATH = "LogStorage"
+    
+    private override init() { }
+    
+    static public let share: LogStorage = LogStorage()
+    
 }

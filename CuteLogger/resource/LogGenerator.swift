@@ -32,7 +32,7 @@ class LogGenerator: NSObject {
         let levelStr = levelToString(level: level)
         let separator = "|"
         let classSeparator = "_"
-        let log: String = Date().toString() + separator + levelStr + separator + targetClass.className + classSeparator + function + classSeparator + lineStr + separator + content
+        let log: String = Date().toString() + separator + levelStr + separator + targetClass.className + classSeparator + function + classSeparator + lineStr + separator + content + "\n"
         print(log)
         return log
     }

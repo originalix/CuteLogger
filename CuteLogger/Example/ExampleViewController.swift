@@ -23,11 +23,10 @@ class ExampleViewController: UIViewController {
     }
 
     func testFile() {
-        let path = FileTest.createFilePath(fileName: "test")
+//        let path = FileTest.createFilePath(fileName: "test")
 //        let log = LogGenerator().debug(targetClass: self.classForCoder, content: "测试Log")
 //        let data = log.data(using: .utf8)!
 //        FileTest.writeFile(fileName: "test", data: data as NSData)
-        print(path!)
         for i in 0...100 {
             let str = String.init(format: "第 %d 个 Log!", i)
             let log = LogGenerator().debug(targetClass: self.classForCoder, content: str)
