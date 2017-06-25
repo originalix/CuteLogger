@@ -38,34 +38,6 @@ class LogStorage: NSObject, LogStorageProtocol {
         return FileManager.default
     }
     
-    private func dirExists(dir: String) -> Bool {
-        return fileManager().fileExists(atPath: dir)
-    }
-    
-    private func fileExists(path: String) -> Bool {
-        return dirExists(dir: path)
-    }
-    
-    private func fileExists(with fileName: String) -> String? {
-        let cachePath = getCachePath()
-        if (!dirExists(dir: cachePath)) {
-            return nil
-        }
-        
-        let filePath = cachePath + fileName
-        return fileExists(path: filePath) ? filePath : nil
-    }
-    
-    private func createDir(dir: String) -> Bool {
-        do {
-            try fileManager().createDirectory(at: URL.init(fileURLWithPath: dir, isDirectory: true), withIntermediateDirectories: true, attributes: nil)
-        } catch {
-            return false
-        }
-        
-        return true
-    }
-    
     private func createFilePath(fileName: String) -> String? {
         let cachePath = getCachePath()
         if (!dirExists(dir: cachePath) && !createDir(dir: cachePath)) {
@@ -82,6 +54,34 @@ class LogStorage: NSObject, LogStorageProtocol {
         }
         
         return filePath
+    }
+    
+    private func createDir(dir: String) -> Bool {
+        do {
+            try fileManager().createDirectory(at: URL.init(fileURLWithPath: dir, isDirectory: true), withIntermediateDirectories: true, attributes: nil)
+        } catch {
+            return false
+        }
+        
+        return true
+    }
+    
+    private func fileExists(with fileName: String) -> String? {
+        let cachePath = getCachePath()
+        if (!dirExists(dir: cachePath)) {
+            return nil
+        }
+        
+        let filePath = cachePath + fileName
+        return fileExists(path: filePath) ? filePath : nil
+    }
+    
+    private func fileExists(path: String) -> Bool {
+        return dirExists(dir: path)
+    }
+    
+    private func dirExists(dir: String) -> Bool {
+        return fileManager().fileExists(atPath: dir)
     }
     
 }
