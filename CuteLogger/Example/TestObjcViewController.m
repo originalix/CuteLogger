@@ -7,6 +7,7 @@
 //
 
 #import "TestObjcViewController.h"
+#import "CuteLogger-Swift.h"
 
 @interface TestObjcViewController ()
 
