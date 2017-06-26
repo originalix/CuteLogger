@@ -54,4 +54,13 @@ class QueueTests: XCTestCase {
         XCTAssertTrue(result, "插入数据失败")
     }
     
+    func testIsFullQueue() {
+        let bool = LogQueue.default.isFullQueue()
+        XCTAssertTrue(bool, "当前队列溢出函数错误")
+    }
+    
+    func testIsEmptyQueue() {
+        let bool = LogQueue.default.isEmptyQueue()
+        XCTAssertTrue(!bool, "当前是空队列函数错误")
+    }
 }
