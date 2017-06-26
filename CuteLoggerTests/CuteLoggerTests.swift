@@ -76,4 +76,21 @@ class CuteLoggerTests: XCTestCase {
         XCTAssertTrue((str?.characters.count)! > 0, "读取文件失败")
     }
     
+    func testReadFileWithName() {
+        let data = LogStorage.share.readFile(fileName: "wsx")
+        let str = String.init(data: data!, encoding: .utf8)
+        XCTAssertTrue((str?.characters.count)! > 0, "读取文件失败")
+    }
+    
+    func testDeleteFileWithPath() {
+        let str = "这是一个测试的Data"
+        let data = str.data(using: .utf8)
+        let _ = LogStorage.share.writeFile(fileName: "123", data: data!)
+        let filePath = LogStorage.share.getCachePath() + "123"
+        let bool = LogStorage.share.deleteFile(path: filePath)
+        XCTAssertTrue(bool, "根据路径删除文件失败")
+    }
+    
+    
+    
 }
