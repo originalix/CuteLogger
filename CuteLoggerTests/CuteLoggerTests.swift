@@ -57,9 +57,16 @@ class CuteLoggerTests: XCTestCase {
     }
     
     func testCreateFilePath() {
-        let fileName = ""
+        let fileName = "t"
         let filePath = LogStorage.share.createFilePath(fileName: fileName)
         XCTAssertTrue(filePath != nil, "创建文件路径失败")
+    }
+    
+    func testWriteFile() {
+        let str = "这是一个测试的Data"
+        let data = str.data(using: .utf8)
+        let bool = LogStorage.share.writeFile(fileName: "wsx", data: data!)
+        XCTAssertTrue(bool, "写入文件失败")
     }
     
 }
