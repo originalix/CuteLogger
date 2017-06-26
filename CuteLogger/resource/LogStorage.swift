@@ -62,6 +62,8 @@ class LogStorage: NSObject, LogStorageProtocol {
         return true
     }
     
+    
+    
     private func deleteFile(path: String) -> Bool {
         if (!fileExists(path: path)) {
             return true
@@ -73,6 +75,18 @@ class LogStorage: NSObject, LogStorageProtocol {
         }
         
         return true
+    }
+    
+    private func readFileFromCache(path: String) -> Data? {
+        var result: Data?
+        
+        do {
+            result = try Data.init(contentsOf: URL.init(fileURLWithPath: path), options: .uncached)
+        } catch {
+            return nil
+        }
+        
+        return result
     }
     
     private func createFilePath(fileName: String) -> String? {
