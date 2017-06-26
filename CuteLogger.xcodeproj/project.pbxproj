@@ -17,7 +17,6 @@
 		56135E561EFCE016005BCFBB /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56135E551EFCE016005BCFBB /* ExampleViewController.swift */; };
 		56135E581EFCE0AB005BCFBB /* LogGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56135E571EFCE0AB005BCFBB /* LogGenerator.swift */; };
 		56135E9B1EFCFF42005BCFBB /* LogStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56135E9A1EFCFF42005BCFBB /* LogStorage.swift */; };
-		56135E9D1EFD03F7005BCFBB /* FileTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56135E9C1EFD03F7005BCFBB /* FileTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		56135E551EFCE016005BCFBB /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		56135E571EFCE0AB005BCFBB /* LogGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogGenerator.swift; sourceTree = "<group>"; };
 		56135E9A1EFCFF42005BCFBB /* LogStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogStorage.swift; sourceTree = "<group>"; };
-		56135E9C1EFD03F7005BCFBB /* FileTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				56135E551EFCE016005BCFBB /* ExampleViewController.swift */,
-				56135E9C1EFD03F7005BCFBB /* FileTest.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -293,7 +290,6 @@
 				56135E281EFCCD3A005BCFBB /* ViewController.swift in Sources */,
 				56135E261EFCCD3A005BCFBB /* AppDelegate.swift in Sources */,
 				56135E581EFCE0AB005BCFBB /* LogGenerator.swift in Sources */,
-				56135E9D1EFD03F7005BCFBB /* FileTest.swift in Sources */,
 				56135E561EFCE016005BCFBB /* ExampleViewController.swift in Sources */,
 				56135E9B1EFCFF42005BCFBB /* LogStorage.swift in Sources */,
 			);
