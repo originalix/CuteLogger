@@ -19,6 +19,7 @@
 		56135E9B1EFCFF42005BCFBB /* LogStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56135E9A1EFCFF42005BCFBB /* LogStorage.swift */; };
 		5691EB4A1F00F7AC00DC0A40 /* QueueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5691EB491F00F7AC00DC0A40 /* QueueTests.m */; };
 		5691EB4E1F00F90400DC0A40 /* TestObjcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5691EB4D1F00F90400DC0A40 /* TestObjcViewController.m */; };
+		5691EB501F00FAC900DC0A40 /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5691EB4F1F00FAC900DC0A40 /* QueueTests.swift */; };
 		56C90B241F00DE7B0011BDB7 /* LogQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C90B231F00DE7B0011BDB7 /* LogQueue.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		5691EB4B1F00F90400DC0A40 /* CuteLogger-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CuteLogger-Bridging-Header.h"; sourceTree = "<group>"; };
 		5691EB4C1F00F90400DC0A40 /* TestObjcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObjcViewController.h; sourceTree = "<group>"; };
 		5691EB4D1F00F90400DC0A40 /* TestObjcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObjcViewController.m; sourceTree = "<group>"; };
+		5691EB4F1F00FAC900DC0A40 /* QueueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueTests.swift; sourceTree = "<group>"; };
 		56C90B231F00DE7B0011BDB7 /* LogQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogQueue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				56135E3A1EFCCD3A005BCFBB /* CuteLoggerTests.swift */,
+				5691EB4F1F00FAC900DC0A40 /* QueueTests.swift */,
 				5691EB491F00F7AC00DC0A40 /* QueueTests.m */,
 				56135E3C1EFCCD3A005BCFBB /* Info.plist */,
 				5691EB481F00F7AC00DC0A40 /* CuteLoggerTests-Bridging-Header.h */,
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56135E3B1EFCCD3A005BCFBB /* CuteLoggerTests.swift in Sources */,
+				5691EB501F00FAC900DC0A40 /* QueueTests.swift in Sources */,
 				5691EB4A1F00F7AC00DC0A40 /* QueueTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

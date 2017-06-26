@@ -32,17 +32,17 @@ class LogQueue: NSObject,  QueueProtocol {
     }
     
     var queue: LQueue<String>!
-    let maxsize: Int = 10
+    let maxsize: Int = 11
     
     func createQueue() {
-        queue = LQueue.init(logData: [String](), front: 0, rear: 0, maxsize: maxsize)
+        queue = LQueue.init(logData: Array<String>.init(repeating: "", count: maxsize), front: 0, rear: 0, maxsize: maxsize)
     }
     
     func traverseQueue() {
         var i = queue.front
         print("队列中的元素是 : \n")
         while (i % queue.maxsize != queue.rear) {
-            print("%d = %d \n", i, queue.logData[i])
+            print(" 元素\(i) = \(queue.logData[i])")
             i += 1
         }
     }

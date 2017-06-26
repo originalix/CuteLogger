@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import CuteLogger
 
 class QueueTests: XCTestCase {
     
@@ -30,6 +31,27 @@ class QueueTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testCreateQueue() {
+        LogQueue.default.createQueue()
+        let bool = LogQueue.default.queue.maxsize == 11
+        XCTAssertTrue(bool, "创建队列失败")
+    }
+    
+    func testGetLength() {
+        let length = LogQueue.default.getLength()
+        let bool = length == 10
+        XCTAssertTrue(bool, "队列长度获取失败")
+    }
+    
+    func testEnqueue() {
+        var result: Bool!
+        let str = "测试数据"
+        for i in 0...9 {
+            result = LogQueue.default.Enqueue(log: String.init(format: "%@ + %d", str, i))
+        }
+        XCTAssertTrue(result, "插入数据失败")
     }
     
 }

@@ -2,4 +2,69 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CuteLoggerTests/QueueTests.swift"
+            timestampString = "520161947.5186"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "testEnqueue()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CuteLoggerTests.QueueTests.testEnqueue () -&gt; ()"
+                  moduleName = "CuteLoggerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Lix/Documents/LNTS/LNTS-Foundation/CuteLogger/CuteLoggerTests/QueueTests.swift"
+                  timestampString = "520161955.829297"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "586">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CuteLoggerTests.QueueTests.(testEnqueue () -&gt; ()).(implicit closure #1)"
+                  moduleName = "CuteLoggerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Lix/Documents/LNTS/LNTS-Foundation/CuteLogger/CuteLoggerTests/QueueTests.swift"
+                  timestampString = "520161955.833337"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CuteLoggerTests.QueueTests.(testEnqueue () -&gt; ()).(implicit closure #2)"
+                  moduleName = "CuteLoggerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Lix/Documents/LNTS/LNTS-Foundation/CuteLogger/CuteLoggerTests/QueueTests.swift"
+                  timestampString = "520161955.836658"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
