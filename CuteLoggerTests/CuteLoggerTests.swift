@@ -50,4 +50,10 @@ class CuteLoggerTests: XCTestCase {
         XCTAssertTrue(bool, "查询文件存在状态函数无效")
     }
     
+    func testFileExistsWithFileName() {
+        let fileName = "testDir"
+        let filePath = LogStorage.share.fileExists(fileName: fileName)
+        XCTAssertTrue(filePath != nil, "根据文件名查询文件状态失败")
+    }
+    
 }
