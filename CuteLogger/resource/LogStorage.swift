@@ -12,7 +12,7 @@ protocol LogStorageProtocol {
     func getCachePath() -> String
     func deleteFile(fileName: String) -> Bool
     func cleanCache() -> Bool
-//    func readFile(with name: String) -> NSData?
+    func readFile(fileName: String) -> Data?
 //    func writeFile(with name:String, data: Data)
     
 }
@@ -75,6 +75,14 @@ class LogStorage: NSObject, LogStorageProtocol {
         }
         
         return true
+    }
+    
+    public func readFile(fileName: String) -> Data? {
+        guard let filePath = fileExists(fileName: fileName) else {
+            return nil
+        }
+        
+        return readFileFromCache(path: filePath)
     }
     
     private func readFileFromCache(path: String) -> Data? {
