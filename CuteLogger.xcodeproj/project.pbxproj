@@ -17,6 +17,7 @@
 		56135E561EFCE016005BCFBB /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56135E551EFCE016005BCFBB /* ExampleViewController.swift */; };
 		56135E581EFCE0AB005BCFBB /* LogGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56135E571EFCE0AB005BCFBB /* LogGenerator.swift */; };
 		56135E9B1EFCFF42005BCFBB /* LogStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56135E9A1EFCFF42005BCFBB /* LogStorage.swift */; };
+		56C90B241F00DE7B0011BDB7 /* LogQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C90B231F00DE7B0011BDB7 /* LogQueue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		56135E551EFCE016005BCFBB /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		56135E571EFCE0AB005BCFBB /* LogGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogGenerator.swift; sourceTree = "<group>"; };
 		56135E9A1EFCFF42005BCFBB /* LogStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogStorage.swift; sourceTree = "<group>"; };
+		56C90B231F00DE7B0011BDB7 /* LogQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogQueue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			children = (
 				56135E571EFCE0AB005BCFBB /* LogGenerator.swift */,
 				56135E9A1EFCFF42005BCFBB /* LogStorage.swift */,
+				56C90B231F00DE7B0011BDB7 /* LogQueue.swift */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				56135E261EFCCD3A005BCFBB /* AppDelegate.swift in Sources */,
 				56135E581EFCE0AB005BCFBB /* LogGenerator.swift in Sources */,
 				56135E561EFCE016005BCFBB /* ExampleViewController.swift in Sources */,
+				56C90B241F00DE7B0011BDB7 /* LogQueue.swift in Sources */,
 				56135E9B1EFCFF42005BCFBB /* LogStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

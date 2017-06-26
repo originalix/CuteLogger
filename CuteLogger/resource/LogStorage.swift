@@ -8,16 +8,15 @@
 
 import UIKit
 
-protocol LogStorageProtocol {
+public protocol LogStorageProtocol {
     func getCachePath() -> String
     func deleteFile(fileName: String) -> Bool
     func cleanCache() -> Bool
     func readFile(fileName: String) -> Data?
     func updateFile(fileName: String, data: Data) -> Bool
-    
 }
 
-class LogStorage: NSObject, LogStorageProtocol {
+public class LogStorage: NSObject, LogStorageProtocol {
     
     let CACHEPATH = "LogStorage"
     
