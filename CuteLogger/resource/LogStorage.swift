@@ -10,7 +10,7 @@ import UIKit
 
 protocol LogStorageProtocol {
     func getCachePath() -> String
-//    func deleteFile(with name: String) -> Bool
+    func deleteFile(fileName: String) -> Bool
 //    func cleanCache() -> Bool
 //    func readFile(with name: String) -> NSData?
 //    func writeFile(with name:String, data: Data)
@@ -36,6 +36,14 @@ class LogStorage: NSObject, LogStorageProtocol {
     
     private func fileManager() -> FileManager {
         return FileManager.default
+    }
+    
+    public func deleteFile(fileName: String) -> Bool {
+        guard let filePath = fileExists(fileName: fileName) else {
+            return true
+        }
+        
+        return deleteFile(path: filePath)
     }
     
     private func deleteFile(path: String) -> Bool {
@@ -79,7 +87,7 @@ class LogStorage: NSObject, LogStorageProtocol {
         return true
     }
     
-    private func fileExists(with fileName: String) -> String? {
+    private func fileExists(fileName: String) -> String? {
         let cachePath = getCachePath()
         if (!dirExists(dir: cachePath)) {
             return nil
