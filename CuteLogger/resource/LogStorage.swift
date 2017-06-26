@@ -66,7 +66,7 @@ class LogStorage: NSObject, LogStorageProtocol {
     
     
     
-    func deleteFile(path: String) -> Bool {
+    private func deleteFile(path: String) -> Bool {
         if (!fileExists(path: path)) {
             return true
         }
@@ -87,7 +87,7 @@ class LogStorage: NSObject, LogStorageProtocol {
         return readFileFromCache(path: filePath)
     }
     
-    func readFileFromCache(path: String) -> Data? {
+    private func readFileFromCache(path: String) -> Data? {
         var result: Data?
         
         do {
@@ -112,7 +112,7 @@ class LogStorage: NSObject, LogStorageProtocol {
         return true
     }
     
-    func writeFile(fileName: String, data: Data) -> Bool {
+    private func writeFile(fileName: String, data: Data) -> Bool {
         guard let filePath = createFilePath(fileName: fileName) else {
             return false
         }
@@ -126,7 +126,7 @@ class LogStorage: NSObject, LogStorageProtocol {
         return true
     }
     
-    func createFilePath(fileName: String) -> String? {
+    private func createFilePath(fileName: String) -> String? {
         let cachePath = getCachePath()
         if (!dirExists(dir: cachePath) && !createDir(dir: cachePath)) {
             return nil
@@ -148,7 +148,7 @@ class LogStorage: NSObject, LogStorageProtocol {
         return filePath
     }
     
-    func createDir(dir: String) -> Bool {
+    private func createDir(dir: String) -> Bool {
         do {
             try fileManager().createDirectory(at: URL.init(fileURLWithPath: dir, isDirectory: true), withIntermediateDirectories: true, attributes: nil)
         } catch {
@@ -158,7 +158,7 @@ class LogStorage: NSObject, LogStorageProtocol {
         return true
     }
     
-    func fileExists(fileName: String) -> String? {
+    private func fileExists(fileName: String) -> String? {
         let cachePath = getCachePath()
         if (!dirExists(dir: cachePath)) {
             return nil
@@ -168,11 +168,11 @@ class LogStorage: NSObject, LogStorageProtocol {
         return fileExists(path: filePath) ? filePath : nil
     }
     
-    func fileExists(path: String) -> Bool {
+    private func fileExists(path: String) -> Bool {
         return dirExists(dir: path)
     }
     
-    func dirExists(dir: String) -> Bool {
+    private func dirExists(dir: String) -> Bool {
         return fileManager().fileExists(atPath: dir)
     }
     
