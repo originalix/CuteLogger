@@ -31,6 +31,8 @@ class LogStorage: NSObject, LogStorageProtocol {
             cacheDir += "/"
         }
         
+        cacheDir += CACHEPATH + "/"
+        
         return cacheDir
     }
     
@@ -142,7 +144,7 @@ class LogStorage: NSObject, LogStorageProtocol {
         return filePath
     }
     
-    private func createDir(dir: String) -> Bool {
+    func createDir(dir: String) -> Bool {
         do {
             try fileManager().createDirectory(at: URL.init(fileURLWithPath: dir, isDirectory: true), withIntermediateDirectories: true, attributes: nil)
         } catch {
@@ -152,7 +154,7 @@ class LogStorage: NSObject, LogStorageProtocol {
         return true
     }
     
-    private func fileExists(fileName: String) -> String? {
+    func fileExists(fileName: String) -> String? {
         let cachePath = getCachePath()
         if (!dirExists(dir: cachePath)) {
             return nil
@@ -162,11 +164,11 @@ class LogStorage: NSObject, LogStorageProtocol {
         return fileExists(path: filePath) ? filePath : nil
     }
     
-    private func fileExists(path: String) -> Bool {
+    func fileExists(path: String) -> Bool {
         return dirExists(dir: path)
     }
     
-    private func dirExists(dir: String) -> Bool {
+    func dirExists(dir: String) -> Bool {
         return fileManager().fileExists(atPath: dir)
     }
     
