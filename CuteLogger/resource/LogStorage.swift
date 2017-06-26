@@ -13,7 +13,7 @@ protocol LogStorageProtocol {
     func deleteFile(fileName: String) -> Bool
     func cleanCache() -> Bool
     func readFile(fileName: String) -> Data?
-//    func writeFile(with name:String, data: Data)
+    func updateFile(fileName: String, data: Data) -> Bool
     
 }
 
@@ -95,6 +95,33 @@ class LogStorage: NSObject, LogStorageProtocol {
         }
         
         return result
+    }
+    
+    public func updateFile(fileName: String, data: Data) -> Bool {
+        guard let filePath = fileExists(fileName: fileName) else {
+            let _ = createFilePath(fileName: fileName)
+            return writeFile(fileName: fileName, data: data)
+        }
+        
+        let fileHandle: FileHandle = FileHandle.init(forUpdatingAtPath: filePath)!
+        fileHandle.seekToEndOfFile()
+        fileHandle.write(data)
+        fileHandle.closeFile()
+        return true
+    }
+    
+    private func writeFile(fileName: String, data: Data) -> Bool {
+        guard let filePath = createFilePath(fileName: fileName) else {
+            return false
+        }
+        
+        do {
+            try data.write(to: URL.init(fileURLWithPath: filePath))
+        } catch {
+            return false
+        }
+        
+        return true
     }
     
     private func createFilePath(fileName: String) -> String? {
