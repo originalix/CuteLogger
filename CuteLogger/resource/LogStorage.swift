@@ -132,6 +132,10 @@ class LogStorage: NSObject, LogStorageProtocol {
             return nil
         }
         
+        if fileName.characters.count < 1 {
+            return nil
+        }
+        
         let filePath = cachePath + fileName
         if fileExists(path: filePath) {
             do {

@@ -57,7 +57,7 @@ class CuteLoggerTests: XCTestCase {
     }
     
     func testCreateFilePath() {
-        let fileName = "createFile"
+        let fileName = ""
         let filePath = LogStorage.share.createFilePath(fileName: fileName)
         XCTAssertTrue(filePath != nil, "创建文件路径失败")
     }
