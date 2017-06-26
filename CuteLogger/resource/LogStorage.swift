@@ -44,7 +44,7 @@ class LogStorage: NSObject, LogStorageProtocol {
         guard let filePath = fileExists(fileName: fileName) else {
             return true
         }
-        
+
         return deleteFile(path: filePath)
     }
     

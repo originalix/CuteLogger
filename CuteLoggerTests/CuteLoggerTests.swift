@@ -91,6 +91,23 @@ class CuteLoggerTests: XCTestCase {
         XCTAssertTrue(bool, "根据路径删除文件失败")
     }
     
+    func testDeleteFile() {
+        let str = "这!!!!!!!!!"
+        let data = str.data(using: .utf8)
+        let _ = LogStorage.share.writeFile(fileName: "deleteFile", data: data!)
+        let bool = LogStorage.share.deleteFile(fileName: "deleteFile")
+        XCTAssertTrue(bool, "根据文件名删除文件失败")
+    }
     
+//    func testCleanCache() {
+//        let bool = LogStorage.share.cleanCache()
+//        XCTAssertTrue(bool, "清除缓存成功")
+//    }
     
+    func testUpdateFile() {
+        let str = "this is a test page................."
+        let data = str.data(using: .utf8)
+        let bool = LogStorage.share.updateFile(fileName: "tttfile", data: data!)
+        XCTAssertTrue(bool, "更新文件失败")
+    }
 }
