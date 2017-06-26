@@ -66,7 +66,7 @@ class LogStorage: NSObject, LogStorageProtocol {
     
     
     
-    private func deleteFile(path: String) -> Bool {
+    func deleteFile(path: String) -> Bool {
         if (!fileExists(path: path)) {
             return true
         }
@@ -87,7 +87,7 @@ class LogStorage: NSObject, LogStorageProtocol {
         return readFileFromCache(path: filePath)
     }
     
-    private func readFileFromCache(path: String) -> Data? {
+    func readFileFromCache(path: String) -> Data? {
         var result: Data?
         
         do {
@@ -112,7 +112,7 @@ class LogStorage: NSObject, LogStorageProtocol {
         return true
     }
     
-    private func writeFile(fileName: String, data: Data) -> Bool {
+    func writeFile(fileName: String, data: Data) -> Bool {
         guard let filePath = createFilePath(fileName: fileName) else {
             return false
         }
@@ -126,7 +126,7 @@ class LogStorage: NSObject, LogStorageProtocol {
         return true
     }
     
-    private func createFilePath(fileName: String) -> String? {
+    func createFilePath(fileName: String) -> String? {
         let cachePath = getCachePath()
         if (!dirExists(dir: cachePath) && !createDir(dir: cachePath)) {
             return nil
