@@ -2,4 +2,69 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CuteLoggerTests/CuteLoggerTests.swift"
+            timestampString = "520148219.43184"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "testReadFile()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CuteLoggerTests.CuteLoggerTests.testReadFile () -&gt; ()"
+                  moduleName = "CuteLoggerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Lix/Documents/LNTS/LNTS-Foundation/CuteLogger/CuteLoggerTests/CuteLoggerTests.swift"
+                  timestampString = "520148244.195255"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "524">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CuteLoggerTests.CuteLoggerTests.(testReadFile () -&gt; ()).(implicit closure #1)"
+                  moduleName = "CuteLoggerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Lix/Documents/LNTS/LNTS-Foundation/CuteLogger/CuteLoggerTests/CuteLoggerTests.swift"
+                  timestampString = "520148244.197981"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "53">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CuteLoggerTests.CuteLoggerTests.(testReadFile () -&gt; ()).(implicit closure #2)"
+                  moduleName = "CuteLoggerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Lix/Documents/LNTS/LNTS-Foundation/CuteLogger/CuteLoggerTests/CuteLoggerTests.swift"
+                  timestampString = "520148244.200478"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

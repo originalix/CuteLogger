@@ -69,4 +69,11 @@ class CuteLoggerTests: XCTestCase {
         XCTAssertTrue(bool, "写入文件失败")
     }
     
+    func testReadFile() {
+        let filePath = LogStorage.share.getCachePath() + "wsx"
+        let data = LogStorage.share.readFileFromCache(path: filePath)
+        let str = String.init(data: data!, encoding: .utf8)
+        XCTAssertTrue((str?.characters.count)! > 0, "读取文件失败")
+    }
+    
 }
