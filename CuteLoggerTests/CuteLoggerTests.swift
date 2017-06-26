@@ -38,6 +38,16 @@ class CuteLoggerTests: XCTestCase {
         XCTAssertTrue(bool, "创建文件夹失败")
     }
     
+    func testDirExists() {
+        let filePath = LogStorage.share.getCachePath() + "testDir"
+        let bool = LogStorage.share.dirExists(dir: filePath)
+        XCTAssertTrue(bool, "查询文件存在状态函数无效")
+    }
     
+    func testFileExists() {
+        let filePath = LogStorage.share.getCachePath() + "testDir"
+        let bool = LogStorage.share.fileExists(path: filePath)
+        XCTAssertTrue(bool, "查询文件存在状态函数无效")
+    }
     
 }
