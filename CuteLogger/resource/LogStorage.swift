@@ -14,6 +14,7 @@ public protocol LogStorageProtocol {
     func cleanCache() -> Bool
     func readFile(fileName: String) -> Data?
     func updateFile(fileName: String, data: Data) -> Bool
+    func createFileName() -> String
 }
 
 public class LogStorage: NSObject, LogStorageProtocol {
@@ -39,6 +40,14 @@ public class LogStorage: NSObject, LogStorageProtocol {
         return FileManager.default
     }
     
+    public func createFileName() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let fileName = dateFormatter.string(from: Date())
+        
+        return fileName
+    }
+    
     public func deleteFile(fileName: String) -> Bool {
         guard let filePath = fileExists(fileName: fileName) else {
             return true
@@ -62,8 +71,6 @@ public class LogStorage: NSObject, LogStorageProtocol {
         
         return true
     }
-    
-    
     
     private func deleteFile(path: String) -> Bool {
         if (!fileExists(path: path)) {

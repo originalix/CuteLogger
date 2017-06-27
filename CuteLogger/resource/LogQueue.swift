@@ -88,4 +88,11 @@ public class LogQueue: NSObject,  QueueProtocol {
         return true
     }
     
+    public func updateFileWhenTranverse() {
+        var i = queue.front
+        while (i % queue.maxsize != queue.rear) {
+            print(" 元素\(i) = \(queue.logData[i])")
+            i += 1
+        }
+    }
 }
