@@ -1,0 +1,6 @@
+framework module Pods_CuteLogger {
+  umbrella header "Pods-CuteLogger-umbrella.h"
+
+  export *
+  module * { export * }
+}

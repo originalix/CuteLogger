@@ -21,6 +21,7 @@
 		5691EB4E1F00F90400DC0A40 /* TestObjcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5691EB4D1F00F90400DC0A40 /* TestObjcViewController.m */; };
 		5691EB501F00FAC900DC0A40 /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5691EB4F1F00FAC900DC0A40 /* QueueTests.swift */; };
 		56C90B241F00DE7B0011BDB7 /* LogQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C90B231F00DE7B0011BDB7 /* LogQueue.swift */; };
+		892AC92170AA3DB59162D5D5 /* Pods_CuteLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14FA4F903B60D1514CB5508 /* Pods_CuteLogger.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0341AE4CA125E1085F4E9F70 /* Pods-CuteLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuteLogger.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuteLogger/Pods-CuteLogger.release.xcconfig"; sourceTree = "<group>"; };
+		05A1258F4253C0D927E8EF61 /* Pods-CuteLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuteLogger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuteLogger/Pods-CuteLogger.debug.xcconfig"; sourceTree = "<group>"; };
 		56135E221EFCCD3A005BCFBB /* CuteLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuteLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56135E251EFCCD3A005BCFBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56135E271EFCCD3A005BCFBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		5691EB4F1F00FAC900DC0A40 /* QueueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueTests.swift; sourceTree = "<group>"; };
 		5696BB7E1F022A2100DD1669 /* LogObjcConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogObjcConst.h; sourceTree = "<group>"; };
 		56C90B231F00DE7B0011BDB7 /* LogQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogQueue.swift; sourceTree = "<group>"; };
+		E14FA4F903B60D1514CB5508 /* Pods_CuteLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuteLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892AC92170AA3DB59162D5D5 /* Pods_CuteLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4998682FD677F023C40B2561 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E14FA4F903B60D1514CB5508 /* Pods_CuteLogger.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		56135E191EFCCD3A005BCFBB = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +112,8 @@
 				56135E391EFCCD3A005BCFBB /* CuteLoggerTests */,
 				56135E441EFCCD3A005BCFBB /* CuteLoggerUITests */,
 				56135E231EFCCD3A005BCFBB /* Products */,
+				E83365E7DA86773FC3D1572D /* Pods */,
+				4998682FD677F023C40B2561 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,6 +185,15 @@
 			path = resource;
 			sourceTree = "<group>";
 		};
+		E83365E7DA86773FC3D1572D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05A1258F4253C0D927E8EF61 /* Pods-CuteLogger.debug.xcconfig */,
+				0341AE4CA125E1085F4E9F70 /* Pods-CuteLogger.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56135E4A1EFCCD3B005BCFBB /* Build configuration list for PBXNativeTarget "CuteLogger" */;
 			buildPhases = (
+				5F9066A37AA318430757E94B /* [CP] Check Pods Manifest.lock */,
 				56135E1E1EFCCD3A005BCFBB /* Sources */,
 				56135E1F1EFCCD3A005BCFBB /* Frameworks */,
 				56135E201EFCCD3A005BCFBB /* Resources */,
+				99048425E3D3F2994686F20A /* [CP] Embed Pods Frameworks */,
+				C038A4D0346DDBC7F070CD6D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,6 +330,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F9066A37AA318430757E94B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		99048425E3D3F2994686F20A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CuteLogger/Pods-CuteLogger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C038A4D0346DDBC7F070CD6D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CuteLogger/Pods-CuteLogger-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		56135E1E1EFCCD3A005BCFBB /* Sources */ = {
@@ -467,6 +542,7 @@
 		};
 		56135E4B1EFCCD3B005BCFBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05A1258F4253C0D927E8EF61 /* Pods-CuteLogger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -484,6 +560,7 @@
 		};
 		56135E4C1EFCCD3B005BCFBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0341AE4CA125E1085F4E9F70 /* Pods-CuteLogger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

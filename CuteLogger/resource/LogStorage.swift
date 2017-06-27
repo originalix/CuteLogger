@@ -21,7 +21,10 @@ public class LogStorage: NSObject, LogStorageProtocol {
     
     let CACHEPATH = "LogStorage"
     
-    private override init() { }
+    private override init() {
+        super.init()
+        print(getCachePath())
+    }
     
     static public let share: LogStorage = LogStorage()
     
