@@ -71,7 +71,7 @@ public class LogQueue: NSObject,  QueueProtocol {
     public func Enqueue(log: String) -> Bool {
         if isFullQueue() {
             print("队列已满，插入失败 \n")
-            return false
+            updateFileWhenTranverse()
         }
         
         queue.logData[queue.rear] = log

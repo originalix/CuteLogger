@@ -78,24 +78,35 @@ class QueueTests: XCTestCase {
 //        XCTAssertTrue(result, "弹出队列失败")
 //    }
 //    
-    func testUpdateToFile() {
-        for i in 0...9 {
+//    func testUpdateToFile() {
+//        for i in 0...9 {
+//            let content = String.init(format: "这是一个测试日志 ~ 第%d条", i)
+//            let log = LogGenerator().createLog(level: .debug, targetClass: self.classForCoder, type: .native, content: content)
+//            let _ = LogQueue.default.Enqueue(log: log)
+//        }
+//        
+//        LogQueue.default.updateFileWhenTranverse()
+//        
+//        for i in 10...19 {
+//            let content = String.init(format: "这是一个测试日志 ~ 第%d条", i)
+//            let log = LogGenerator().createLog(level: .debug, targetClass: self.classForCoder, type: .native, content: content)
+//            let _ = LogQueue.default.Enqueue(log: log)
+//        }
+//        
+//        LogQueue.default.updateFileWhenTranverse()
+//        
+//        let bool = LogQueue.default.isEmptyQueue()
+//        XCTAssertTrue(bool, "更新文件失败")
+//    }
+    
+    func testWriteToFileNotLimit() {
+        var result = true
+        for i in 200...300 {
             let content = String.init(format: "这是一个测试日志 ~ 第%d条", i)
             let log = LogGenerator().createLog(level: .debug, targetClass: self.classForCoder, type: .native, content: content)
-            let _ = LogQueue.default.Enqueue(log: log)
+            result = LogQueue.default.Enqueue(log: log)
         }
         
-        LogQueue.default.updateFileWhenTranverse()
-        
-        for i in 10...19 {
-            let content = String.init(format: "这是一个测试日志 ~ 第%d条", i)
-            let log = LogGenerator().createLog(level: .debug, targetClass: self.classForCoder, type: .native, content: content)
-            let _ = LogQueue.default.Enqueue(log: log)
-        }
-        
-        LogQueue.default.updateFileWhenTranverse()
-        
-        let bool = LogQueue.default.isEmptyQueue()
-        XCTAssertTrue(bool, "更新文件失败")
+        XCTAssertTrue(result, "更新文件失败")
     }
 }
