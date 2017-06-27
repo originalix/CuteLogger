@@ -34,7 +34,11 @@ class ArchiveTests: XCTestCase {
     }
     
     func testArchiveLogDir() {
+        LogArchive.createZip(contentsOfDirectory: LogStorage.share.getCachePath())
         
+        let bool = FileManager.default.fileExists(atPath: LogArchive.getArchivePath())
+        
+        XCTAssertTrue(bool, "压缩文件失败")
     }
     
 }
