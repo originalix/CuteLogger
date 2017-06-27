@@ -83,6 +83,7 @@ public class LogQueue: NSObject,  QueueProtocol {
             return false
         }
         
+        queue.logData[queue.front] = ""
         queue.front = (queue.front + 1) % queue.maxsize
         return true
     }
