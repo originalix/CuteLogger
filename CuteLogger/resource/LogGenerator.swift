@@ -22,8 +22,28 @@ enum OperateType {
 
 class LogGenerator: NSObject {
     
-    public func debug(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) -> String {
-        return createLog(level: .debug, targetClass: targetClass, type: .native, content: content, line, function)
+    public func debug(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) -> Bool {
+        let log = createLog(level: .debug, targetClass: targetClass, type: .native, content: content, line, function)
+        print(log)
+        return Enqueue(log: log)
+    }
+    
+    public func info(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) -> Bool {
+        let log = createLog(level: .info, targetClass: targetClass, type: .native, content: content, line, function)
+        print(log)
+        return Enqueue(log: log)
+    }
+    
+    public func warning(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) -> Bool {
+        let log = createLog(level: .warning, targetClass: targetClass, type: .native, content: content, line, function)
+        print(log)
+        return Enqueue(log: log)
+    }
+    
+    public func error(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) -> Bool {
+        let log = createLog(level: .error, targetClass: targetClass, type: .native, content: content, line, function)
+        print(log)
+        return Enqueue(log: log)
     }
     
     public func createLog(level: DebugLevel, targetClass: AnyClass, type: OperateType, content: String,  _ line: Int = #line, _ function: String = #function)
@@ -50,6 +70,10 @@ class LogGenerator: NSObject {
                 levelStr = "Error"
         }
         return levelStr
+    }
+    
+    private func Enqueue(log: String) -> Bool {
+        return LogQueue.default.Enqueue(log: log)
     }
 }
 
