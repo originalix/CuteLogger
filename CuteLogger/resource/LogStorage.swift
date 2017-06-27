@@ -20,6 +20,7 @@ public protocol LogStorageProtocol {
 public class LogStorage: NSObject, LogStorageProtocol {
     
     let CACHEPATH = "LogStorage"
+    let ARCHIVE_CACHE_PATH = "LogStorageArchive"
     
     private override init() {
         super.init()
@@ -185,4 +186,12 @@ public class LogStorage: NSObject, LogStorageProtocol {
         return fileManager().fileExists(atPath: dir)
     }
     
+    public func getArchivePath() -> String {
+        var cacheDir = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first!
+        if (!cacheDir.hasSuffix("/")) {
+            cacheDir += "/"
+        }
+        
+        return cacheDir
+    }
 }

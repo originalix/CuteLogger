@@ -20,6 +20,7 @@
 		5691EB4A1F00F7AC00DC0A40 /* QueueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5691EB491F00F7AC00DC0A40 /* QueueTests.m */; };
 		5691EB4E1F00F90400DC0A40 /* TestObjcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5691EB4D1F00F90400DC0A40 /* TestObjcViewController.m */; };
 		5691EB501F00FAC900DC0A40 /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5691EB4F1F00FAC900DC0A40 /* QueueTests.swift */; };
+		5696BB801F02318800DD1669 /* LogArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5696BB7F1F02318800DD1669 /* LogArchive.swift */; };
 		56C90B241F00DE7B0011BDB7 /* LogQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C90B231F00DE7B0011BDB7 /* LogQueue.swift */; };
 		892AC92170AA3DB59162D5D5 /* Pods_CuteLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14FA4F903B60D1514CB5508 /* Pods_CuteLogger.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		5691EB4D1F00F90400DC0A40 /* TestObjcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObjcViewController.m; sourceTree = "<group>"; };
 		5691EB4F1F00FAC900DC0A40 /* QueueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueTests.swift; sourceTree = "<group>"; };
 		5696BB7E1F022A2100DD1669 /* LogObjcConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogObjcConst.h; sourceTree = "<group>"; };
+		5696BB7F1F02318800DD1669 /* LogArchive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogArchive.swift; sourceTree = "<group>"; };
 		56C90B231F00DE7B0011BDB7 /* LogQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogQueue.swift; sourceTree = "<group>"; };
 		E14FA4F903B60D1514CB5508 /* Pods_CuteLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuteLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -181,6 +183,7 @@
 				56135E9A1EFCFF42005BCFBB /* LogStorage.swift */,
 				56C90B231F00DE7B0011BDB7 /* LogQueue.swift */,
 				5696BB7E1F022A2100DD1669 /* LogObjcConst.h */,
+				5696BB7F1F02318800DD1669 /* LogArchive.swift */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				56135E561EFCE016005BCFBB /* ExampleViewController.swift in Sources */,
 				56C90B241F00DE7B0011BDB7 /* LogQueue.swift in Sources */,
 				56135E9B1EFCFF42005BCFBB /* LogStorage.swift in Sources */,
+				5696BB801F02318800DD1669 /* LogArchive.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +559,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "CuteLogger/Example/CuteLogger-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
@@ -572,6 +577,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CuteLogger/Example/CuteLogger-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};
