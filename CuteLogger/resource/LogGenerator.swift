@@ -26,12 +26,7 @@ class LogGenerator: NSObject {
         let log = createLog(level: .debug, targetClass: targetClass, type: .native, content: content, line, function)
         let _ = Enqueue(log: log)
     }
-    
-    public func debugObjc(targetClass: AnyClass, content: String, line: Int = #line, function: String = #function) {
-        let log = createLog(level: .debug, targetClass: targetClass, type: .native, content: content, line, function)
-        let _ = Enqueue(log: log)
-    }
-    
+
     public func info(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) {
         let log = createLog(level: .info, targetClass: targetClass, type: .native, content: content, line, function)
         let _ = Enqueue(log: log)
