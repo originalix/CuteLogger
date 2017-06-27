@@ -41,9 +41,10 @@ public class LogQueue: NSObject,  QueueProtocol {
     public func traverseQueue() {
         var i = queue.front
         print("队列中的元素是 : \n")
-        while (i % queue.maxsize != queue.rear) {
+        while (i != queue.rear) {
             print(" 元素\(i) = \(queue.logData[i])")
             i += 1
+            i = i % maxsize
         }
     }
     
