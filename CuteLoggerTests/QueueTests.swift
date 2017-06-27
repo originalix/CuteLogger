@@ -63,4 +63,18 @@ class QueueTests: XCTestCase {
         let bool = LogQueue.default.isEmptyQueue()
         XCTAssertTrue(!bool, "当前是空队列函数错误")
     }
+    
+    func testDequeue() {
+        var result: Bool!
+        let str = "测试数据"
+        for i in 0...9 {
+            let _ = LogQueue.default.Enqueue(log: String.init(format: "%@ + %d", str, i))
+        }
+        
+        for _ in 0...5 {
+            result = LogQueue.default.Dequeue()
+        }
+        
+        XCTAssertTrue(result, "弹出队列失败")
+    }
 }

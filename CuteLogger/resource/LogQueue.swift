@@ -24,7 +24,7 @@ protocol QueueProtocol {
     func Dequeue() -> Bool
 }
 
-class LogQueue: NSObject,  QueueProtocol {
+public class LogQueue: NSObject,  QueueProtocol {
     static public let `default` = LogQueue()
     private override init() {
         super.init()
@@ -38,7 +38,7 @@ class LogQueue: NSObject,  QueueProtocol {
         queue = LQueue.init(logData: Array<String>.init(repeating: "", count: maxsize), front: 0, rear: 0, maxsize: maxsize)
     }
     
-    func traverseQueue() {
+    public func traverseQueue() {
         var i = queue.front
         print("队列中的元素是 : \n")
         while (i % queue.maxsize != queue.rear) {
@@ -67,7 +67,7 @@ class LogQueue: NSObject,  QueueProtocol {
         return (queue.rear - queue.front + queue.maxsize) % queue.maxsize
     }
     
-    func Enqueue(log: String) -> Bool {
+    public func Enqueue(log: String) -> Bool {
         if isFullQueue() {
             print("队列已满，插入失败 \n")
             return false
@@ -78,7 +78,7 @@ class LogQueue: NSObject,  QueueProtocol {
         return true
     }
     
-    func Dequeue() -> Bool {
+    public func Dequeue() -> Bool {
         if isEmptyQueue() {
             return false
         }
