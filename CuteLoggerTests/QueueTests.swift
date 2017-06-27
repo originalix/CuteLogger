@@ -99,17 +99,17 @@ class QueueTests: XCTestCase {
 //        XCTAssertTrue(bool, "更新文件失败")
 //    }
     
-    func testWriteToFileNotLimit() {
-        let _ = LogStorage.share.cleanCache()
-        var result = true
-        self.measure {
-            for i in 0...10000 {
-                let content = String.init(format: "这是一个测试日志 ~ 第%d条", i)
-                let log = LogGenerator().createLog(level: .debug, targetClass: self.classForCoder, type: .native, content: content)
-                result = LogQueue.default.Enqueue(log: log)
-            }
-        }
-        
-        XCTAssertTrue(result, "更新文件失败")
-    }
+//    func testWriteToFileNotLimit() {
+//        let _ = LogStorage.share.cleanCache()
+//        var result = true
+//        self.measure {
+//            for i in 0...10000 {
+//                let content = String.init(format: "这是一个测试日志 ~ 第%d条", i)
+//                let log = LogGenerator().createLog(level: .debug, targetClass: self.classForCoder, type: .native, content: content)
+//                result = LogQueue.default.Enqueue(log: log)
+//            }
+//        }
+//        
+//        XCTAssertTrue(result, "更新文件失败")
+//    }
 }

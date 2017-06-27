@@ -89,7 +89,7 @@ public class LogQueue: NSObject,  QueueProtocol {
         return true
     }
     
-    public func updateFileWhenTranverse() {
+    private func updateFileWhenTranverse() {
         var i = queue.front
         while (i != queue.rear) {
             print(" 元素\(i) = \(queue.logData[i])")

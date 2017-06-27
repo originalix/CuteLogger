@@ -115,4 +115,14 @@ class CuteLoggerTests: XCTestCase {
         let fileName = LogStorage.share.createFileName()
         XCTAssertTrue(fileName == "2017-06-27", "创建文件名有误")
     }
+    
+    func testLogInfo() {
+        let _ = LogStorage.share.cleanCache()
+        for i in 0...300 {
+            let content = String.init(format: "这是一个info Log  +  %d", i)
+            let _ = LogGenerator().error(targetClass: self.classForCoder, content: content)
+        }
+        let bool = LogQueue.default.isEmptyQueue()
+        XCTAssertTrue(!bool, "当前队列错误")
+    }
 }
