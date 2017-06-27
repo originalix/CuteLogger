@@ -110,4 +110,9 @@ class CuteLoggerTests: XCTestCase {
 //        let bool = LogStorage.share.updateFile(fileName: "tttfile", data: data!)
 //        XCTAssertTrue(bool, "更新文件失败")
 //    }
+    
+    func testCreateFileName() {
+        let fileName = LogStorage.share.createFileName()
+        XCTAssertTrue(fileName == "2017-06-27", "创建文件名有误")
+    }
 }
