@@ -63,6 +63,7 @@
 		5691EB4C1F00F90400DC0A40 /* TestObjcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObjcViewController.h; sourceTree = "<group>"; };
 		5691EB4D1F00F90400DC0A40 /* TestObjcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObjcViewController.m; sourceTree = "<group>"; };
 		5691EB4F1F00FAC900DC0A40 /* QueueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueTests.swift; sourceTree = "<group>"; };
+		5696BB7E1F022A2100DD1669 /* LogObjcConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogObjcConst.h; sourceTree = "<group>"; };
 		56C90B231F00DE7B0011BDB7 /* LogQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogQueue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +165,7 @@
 				56135E571EFCE0AB005BCFBB /* LogGenerator.swift */,
 				56135E9A1EFCFF42005BCFBB /* LogStorage.swift */,
 				56C90B231F00DE7B0011BDB7 /* LogQueue.swift */,
+				5696BB7E1F022A2100DD1669 /* LogObjcConst.h */,
 			);
 			path = resource;
 			sourceTree = "<group>";

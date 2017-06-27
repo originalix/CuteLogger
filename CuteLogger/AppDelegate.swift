@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let navi = UINavigationController.init(rootViewController: ExampleViewController())
+        let navi = UINavigationController.init(rootViewController: TestObjcViewController())
         self.window?.rootViewController = navi
         self.window?.makeKeyAndVisible()
         return true

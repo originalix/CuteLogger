@@ -8,6 +8,7 @@
 
 #import "TestObjcViewController.h"
 #import "CuteLogger-Swift.h"
+#import "LogObjcConst.h"
 
 @interface TestObjcViewController ()
 
@@ -17,7 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+//    LogGenerator *log = [[LogGenerator alloc] init];
+//    NSString *str = [NSString stringWithFormat:@"%s", __FUNCTION__];
+//    NSInteger line = (NSInteger)__LINE__;
+//    [log debugWithTargetClass:self.classForCoder content:@"测试Objc-log" :line :str];
+//    [[LogGenerator new] debugWithTargetClass:self.classForCoder content:[NSString stringWithFormat:@"%@", log] :(NSInteger)__LINE__ :[NSString stringWithFormat:@"%s", __FUNCTION__]];
+    Cute_Debug(@"这是一个测试Log")
 }
 
 - (void)didReceiveMemoryWarning {
