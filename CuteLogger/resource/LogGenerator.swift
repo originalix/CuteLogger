@@ -22,28 +22,28 @@ enum OperateType {
 
 class LogGenerator: NSObject {
     
-    public func debug(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) -> Bool {
+    public func debug(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) {
         let log = createLog(level: .debug, targetClass: targetClass, type: .native, content: content, line, function)
         print(log)
-        return Enqueue(log: log)
+        let _ = Enqueue(log: log)
     }
     
-    public func info(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) -> Bool {
+    public func info(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) {
         let log = createLog(level: .info, targetClass: targetClass, type: .native, content: content, line, function)
         print(log)
-        return Enqueue(log: log)
+        let _ = Enqueue(log: log)
     }
     
-    public func warning(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) -> Bool {
+    public func warning(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) {
         let log = createLog(level: .warning, targetClass: targetClass, type: .native, content: content, line, function)
         print(log)
-        return Enqueue(log: log)
+        let _ = Enqueue(log: log)
     }
     
-    public func error(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) -> Bool {
+    public func error(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) {
         let log = createLog(level: .error, targetClass: targetClass, type: .native, content: content, line, function)
         print(log)
-        return Enqueue(log: log)
+        let _ = Enqueue(log: log)
     }
     
     public func createLog(level: DebugLevel, targetClass: AnyClass, type: OperateType, content: String,  _ line: Int = #line, _ function: String = #function)

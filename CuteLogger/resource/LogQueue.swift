@@ -92,7 +92,6 @@ public class LogQueue: NSObject,  QueueProtocol {
     private func updateFileWhenTranverse() {
         var i = queue.front
         while (i != queue.rear) {
-            print(" 元素\(i) = \(queue.logData[i])")
             let fileName = LogStorage.share.createFileName()
             let data = queue.logData[i].data(using: .utf8)
             if (LogStorage.share.updateFile(fileName: fileName, data: data!)) {
