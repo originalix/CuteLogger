@@ -9,11 +9,40 @@
 import UIKit
 
 public protocol LogStorageProtocol {
+    
+    /// 获取日志缓存地址
+    ///
+    /// - Returns: String
     func getCachePath() -> String
+    
+    /// 删除文件
+    ///
+    /// - Parameter fileName: String
+    /// - Returns: Bool
     func deleteFile(fileName: String) -> Bool
+    
+    /// 清除全部日志缓存
+    ///
+    /// - Returns: Bool
     func cleanCache() -> Bool
+    
+    /// 读取日志文件
+    ///
+    /// - Parameter fileName: String
+    /// - Returns: Data
     func readFile(fileName: String) -> Data?
+    
+    /// 更新写入Log数据
+    ///
+    /// - Parameters:
+    ///   - fileName: String
+    ///   - data: Data
+    /// - Returns: Data
     func updateFile(fileName: String, data: Data) -> Bool
+    
+    /// 自动根据天数创建文件名
+    ///
+    /// - Returns: String
     func createFileName() -> String
 }
 

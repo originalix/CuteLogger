@@ -19,7 +19,11 @@ class ExampleViewController: UIViewController {
     }
     
     func testLog() {
-        let _ = LogGenerator().debug(targetClass: self.classForCoder, content: "测试Log!!!")
+        LogGenerator().debug(targetClass: self.classForCoder, content: "测试Log")
+        LogGenerator().warning(targetClass: self.classForCoder, content: "测试Log")
+        LogGenerator().info(targetClass: self.classForCoder, content: "测试Log")
+        LogGenerator().error(targetClass: self.classForCoder, content: "测试Log")
+        
     }
     
     override func didReceiveMemoryWarning() {
