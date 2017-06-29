@@ -4,7 +4,18 @@
 
 ## Installing
 
-暂时没有提供Pod安装方式，稍后补上。
+```bash
+source 'git@git.lnts.cn:lixiao/LNSpecs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '8.0'
+use_frameworks!
+
+target 'Demo' do
+    pod 'CuteLog'
+end
+
+```
 
 ## Usage
 
