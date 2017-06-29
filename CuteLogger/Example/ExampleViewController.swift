@@ -15,15 +15,16 @@ class ExampleViewController: UIViewController {
         super.viewDidLoad()
         
         let _ = LogGenerator().createLog(level: .error, targetClass: self.classForCoder, type: .native, content: "this is a debug log")
-        zipForPackage()
+        testLog()
     }
     
     func testLog() {
-        LogGenerator().debug(targetClass: self.classForCoder, content: "测试Log")
-        LogGenerator().warning(targetClass: self.classForCoder, content: "测试Log")
-        LogGenerator().info(targetClass: self.classForCoder, content: "测试Log")
-        LogGenerator().error(targetClass: self.classForCoder, content: "测试Log")
-        
+        for _ in 0...10 {
+            LogGenerator().debug(targetClass: self.classForCoder, content: "测试Log")
+            LogGenerator().warning(targetClass: self.classForCoder, content: "测试Log")
+            LogGenerator().info(targetClass: self.classForCoder, content: "测试Log")
+            LogGenerator().error(targetClass: self.classForCoder, content: "测试Log")
+        }
     }
     
     override func didReceiveMemoryWarning() {

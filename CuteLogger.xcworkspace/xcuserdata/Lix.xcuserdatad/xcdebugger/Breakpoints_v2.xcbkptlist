@@ -17,38 +17,6 @@
             endingLineNumber = "41"
             landmarkName = "testArchiveLogDir()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CuteLoggerTests.ArchiveTests.testArchiveLogDir () -&gt; ()"
-                  moduleName = "CuteLoggerTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Lix/Documents/LNTS/LNTS-Foundation/CuteLogger/CuteLoggerTests/ArchiveTests.swift"
-                  timestampString = "520242010.7291"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "305">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CuteLoggerTests.ArchiveTests.(testArchiveLogDir () -&gt; ()).(implicit closure #2)"
-                  moduleName = "CuteLoggerTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Lix/Documents/LNTS/LNTS-Foundation/CuteLogger/CuteLoggerTests/ArchiveTests.swift"
-                  timestampString = "520242010.732542"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

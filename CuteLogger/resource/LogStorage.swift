@@ -76,7 +76,7 @@ public class LogStorage: NSObject, LogStorageProtocol {
     public func createFileName() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        let fileName = dateFormatter.string(from: Date())
+        let fileName = dateFormatter.string(from: Date()) + ".txt"
         
         return fileName
     }
