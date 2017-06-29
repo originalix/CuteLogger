@@ -8,19 +8,19 @@
 
 import UIKit
 
-enum DebugLevel {
+public enum DebugLevel {
     case debug
     case info
     case warning
     case error
 }
 
-enum OperateType {
+public enum OperateType {
     case network
     case native
 }
 
-class LogGenerator: NSObject {
+public class LogGenerator: NSObject {
     
     public func debug(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) {
         let log = createLog(level: .debug, targetClass: targetClass, type: .native, content: content, line, function)

@@ -34,7 +34,7 @@ public class LogQueue: NSObject,  QueueProtocol {
     var queue: LQueue<String>!
     let maxsize: Int = 11
     
-    func createQueue() {
+    internal func createQueue() {
         queue = LQueue.init(logData: Array<String>.init(repeating: "", count: maxsize), front: 0, rear: 0, maxsize: maxsize)
     }
     
@@ -48,7 +48,7 @@ public class LogQueue: NSObject,  QueueProtocol {
         }
     }
     
-    func isFullQueue() -> Bool {
+    public func isFullQueue() -> Bool {
         if (queue.front == (queue.rear + 1) % queue.maxsize) {
             return true
         }
@@ -56,7 +56,7 @@ public class LogQueue: NSObject,  QueueProtocol {
         return false
     }
     
-    func isEmptyQueue() -> Bool {
+    public func isEmptyQueue() -> Bool {
         if (queue.front == queue.rear) {
             return true
         }
@@ -64,7 +64,7 @@ public class LogQueue: NSObject,  QueueProtocol {
         return false
     }
     
-    func getLength() -> Int {
+    public func getLength() -> Int {
         return (queue.rear - queue.front + queue.maxsize) % queue.maxsize
     }
     
