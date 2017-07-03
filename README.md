@@ -5,7 +5,6 @@
 ## Installing
 
 ```bash
-source 'git@git.lnts.cn:lixiao/LNSpecs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '8.0'
