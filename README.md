@@ -6,7 +6,6 @@
 
 ```bash
 source 'git@git.lnts.cn:lixiao/LNSpecs.git'
-source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '8.0'
 use_frameworks!
@@ -40,5 +39,5 @@ In Objective-C:
 Cute_Debug(@"这是一个Debug - Log")
 Cute_Info(@"这是一个info - Log")
 Cute_Error(@"这是一个Error - Log")
-Cute_Warning(@"这是一个 Warning - Log")
+Cute_Warning(@"这是一个Warning - Log")
 ```
