@@ -16,6 +16,7 @@ class ExampleViewController: UIViewController {
         
         let _ = LogGenerator().createLog(level: .error, targetClass: self.classForCoder, type: .native, content: "this is a debug log")
         testLog()
+        getFileList()
     }
     
     func testLog() {
@@ -39,5 +40,10 @@ class ExampleViewController: UIViewController {
         let data = str.data(using: .utf8)
         let _ = LogStorage.share.updateFile(fileName: "test", data: data!)
         LogArchive.createZip(contentsOfDirectory: LogStorage.share.getCachePath())
+    }
+    
+    func getFileList() {
+        let arr = LogStorage.share.getFileList()
+        print(arr)
     }
 }

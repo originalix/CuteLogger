@@ -223,4 +223,16 @@ public class LogStorage: NSObject, LogStorageProtocol {
         
         return cacheDir
     }
+    
+    public func getFileList() -> [String] {
+        let path = getCachePath()
+        do {
+            let listArray = try fileManager().contentsOfDirectory(atPath: path)
+            return listArray
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        return []
+    }
 }
