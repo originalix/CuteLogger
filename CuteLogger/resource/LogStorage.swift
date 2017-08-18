@@ -225,26 +225,33 @@ public class LogStorage: NSObject, LogStorageProtocol {
         return cacheDir
     }
     
-    public func getFileList() -> [String] {
+    public func deleteOverDueLog() {
         let path = getCachePath()
         do {
             let listArray = try fileManager().contentsOfDirectory(atPath: path)
-            self.shouleDeleteFileList(fileList: listArray)
-            return listArray
+            let shouldDeleteList = self.shouleDeleteFileList(fileList: listArray)
+            for fileName in shouldDeleteList {
+                let _ = self.deleteFile(fileName: fileName)
+            }
         } catch {
             print(error.localizedDescription)
         }
-        
-        return []
     }
     
-    public func shouleDeleteFileList(fileList: [String]) {
+    public func shouleDeleteFileList(fileList: [String]) -> [String] {
+        var shouldDeleteList: [String] = []
         for fileName in fileList {
             if (fileName.range(of: ".") != nil) {
-                let fileDate = fileName.components(separatedBy: ".").first
-                print(fileDate!)
+                let fileSimpleName = fileName.components(separatedBy: ".").first
+                if let fileDate = fileSimpleName {
+                    if (checkFileIsOverDue(date: fileDate)) {
+                        shouldDeleteList.append(fileName)
+                    }
+                    print(fileDate)
+                }
             }
         }
+        return shouldDeleteList
     }
     
     private func checkFileIsOverDue(date: String) -> Bool {

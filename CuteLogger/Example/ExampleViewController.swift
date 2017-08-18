@@ -43,7 +43,6 @@ class ExampleViewController: UIViewController {
     }
     
     func getFileList() {
-        let arr = LogStorage.share.getFileList()
-        print(arr)
+        LogStorage.share.deleteOverDueLog()
     }
 }
