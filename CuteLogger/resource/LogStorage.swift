@@ -228,11 +228,22 @@ public class LogStorage: NSObject, LogStorageProtocol {
         let path = getCachePath()
         do {
             let listArray = try fileManager().contentsOfDirectory(atPath: path)
+            self.shouleDeleteFileList(fileList: listArray)
             return listArray
         } catch {
             print(error.localizedDescription)
         }
         
         return []
+    }
+    
+    public func shouleDeleteFileList(fileList: [String]) {
+        for fileName in fileList {
+            if (fileName.range(of: ".") != nil) {
+                let fileDate = fileName.components(separatedBy: ".").first
+                print(fileDate!)
+            }
+
+        }
     }
 }
