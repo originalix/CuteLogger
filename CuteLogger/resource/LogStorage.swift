@@ -50,6 +50,7 @@ public class LogStorage: NSObject, LogStorageProtocol {
     
     let CACHEPATH = "LogStorage"
     let ARCHIVE_CACHE_PATH = "LogStorageArchive"
+    let THE_WHOLE_DAY_SECONDS = 86400
     
     private override init() {
         super.init()
@@ -243,7 +244,19 @@ public class LogStorage: NSObject, LogStorageProtocol {
                 let fileDate = fileName.components(separatedBy: ".").first
                 print(fileDate!)
             }
-
         }
     }
+    
+    private func checkFileIsOverDue(date: String) -> Bool {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let fileDate: Date = formatter.date(from: date)!
+        let fileTimestamp = fileDate.timeIntervalSince1970
+        let nowTimestamp = Date().timeIntervalSince1970
+        if ((Int)(nowTimestamp - fileTimestamp) > THE_WHOLE_DAY_SECONDS * 7) {
+            return true
+        }
+        return false
+    }
+    
 }
