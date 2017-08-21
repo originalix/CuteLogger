@@ -42,3 +42,5 @@ Cute_Error(@"这是一个Error - Log")
 Cute_Warning(@"这是一个Warning - Log")
 ```
 
+超过七天的日志会自动删除
+
