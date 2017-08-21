@@ -44,12 +44,16 @@ public protocol LogStorageProtocol {
     ///
     /// - Returns: String
     func createFileName() -> String
+    
+    /// 删除七天之后的过期日志
+    func deleteOverDueLog()
 }
 
 public class LogStorage: NSObject, LogStorageProtocol {
     
     let CACHEPATH = "LogStorage"
     let ARCHIVE_CACHE_PATH = "LogStorageArchive"
+    let THE_WHOLE_DAY_SECONDS = 86400
     
     private override init() {
         super.init()
@@ -223,4 +227,46 @@ public class LogStorage: NSObject, LogStorageProtocol {
         
         return cacheDir
     }
+    
+    public func deleteOverDueLog() {
+        let path = getCachePath()
+        do {
+            let listArray = try fileManager().contentsOfDirectory(atPath: path)
+            let shouldDeleteList = self.shouleDeleteFileList(fileList: listArray)
+            for fileName in shouldDeleteList {
+                let _ = self.deleteFile(fileName: fileName)
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    public func shouleDeleteFileList(fileList: [String]) -> [String] {
+        var shouldDeleteList: [String] = []
+        for fileName in fileList {
+            if (fileName.range(of: ".") != nil) {
+                let fileSimpleName = fileName.components(separatedBy: ".").first
+                if let fileDate = fileSimpleName {
+                    if (checkFileIsOverDue(date: fileDate)) {
+                        shouldDeleteList.append(fileName)
+                    }
+                    print(fileDate)
+                }
+            }
+        }
+        return shouldDeleteList
+    }
+    
+    private func checkFileIsOverDue(date: String) -> Bool {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let fileDate: Date = formatter.date(from: date)!
+        let fileTimestamp = fileDate.timeIntervalSince1970
+        let nowTimestamp = Date().timeIntervalSince1970
+        if ((Int)(nowTimestamp - fileTimestamp) > THE_WHOLE_DAY_SECONDS * 7) {
+            return true
+        }
+        return false
+    }
+    
 }
