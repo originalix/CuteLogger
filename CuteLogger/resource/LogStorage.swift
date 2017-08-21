@@ -44,6 +44,9 @@ public protocol LogStorageProtocol {
     ///
     /// - Returns: String
     func createFileName() -> String
+    
+    /// 删除七天之后的过期日志
+    func deleteOverDueLog()
 }
 
 public class LogStorage: NSObject, LogStorageProtocol {

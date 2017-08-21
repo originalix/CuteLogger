@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CuteLog"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "一个由Swift编写而成的自定义日志系统"
   s.homepage     = "https://github.com/originalix/CuteLogger"
   s.license      = { :type => "MIT", :file => "LICENSE" }
