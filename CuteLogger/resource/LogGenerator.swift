@@ -48,14 +48,8 @@ public class LogGenerator: NSObject {
         let levelStr = levelToString(level: level)
         let separator = "|"
         let classSeparator = "_"
-        let log: String = String.init(format: "%@%@%@%@%@%@%@%@%@%@%@\n", Date().toString(), separator, levelStr, separator, targetClass.className as! CVarArg, classSeparator, function, classSeparator, lineStr, separator, content)
-//        var log: String = Date().toString() + separator + levelStr + separator + targetClass.className + classSeparator
-//        log += levelStr + separator + targetClass.className + classSeparator
-//        log += (function + classSeparator + lineStr + separator + content + "\n")
-//        log += separator
-        
-//            + levelStr + separator + targetClass.className + classSeparator + function + classSeparator + lineStr + separator + content + "\n"
-//        print(log)
+        let log: String = String.init(format: "%@%@%@%@%@%@%@%@%@%@%@\n", Date().toString(), separator, levelStr, separator, targetClass.className, classSeparator, function, classSeparator, lineStr, separator, content)
+        print(log)
         return log
     }
     
@@ -87,7 +81,7 @@ extension Date {
     }
 }
 
-extension NSObject {
+@objc extension NSObject {
     var className: String {
         return String(describing: type(of: self)).components(separatedBy: ".").last!
     }
