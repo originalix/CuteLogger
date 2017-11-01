@@ -22,22 +22,22 @@ public enum OperateType {
 
 public class LogGenerator: NSObject {
     
-    public func debug(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) {
+    @objc public func debug(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) {
         let log = createLog(level: .debug, targetClass: targetClass, type: .native, content: content, line, function)
         let _ = Enqueue(log: log)
     }
 
-    public func info(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) {
+    @objc public func info(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) {
         let log = createLog(level: .info, targetClass: targetClass, type: .native, content: content, line, function)
         let _ = Enqueue(log: log)
     }
     
-    public func warning(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) {
+    @objc public func warning(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) {
         let log = createLog(level: .warning, targetClass: targetClass, type: .native, content: content, line, function)
         let _ = Enqueue(log: log)
     }
     
-    public func error(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) {
+    @objc public func error(targetClass: AnyClass, content: String, _ line: Int = #line, _ function: String = #function) {
         let log = createLog(level: .error, targetClass: targetClass, type: .native, content: content, line, function)
         let _ = Enqueue(log: log)
     }
@@ -48,7 +48,7 @@ public class LogGenerator: NSObject {
         let levelStr = levelToString(level: level)
         let separator = "|"
         let classSeparator = "_"
-        let log: String = Date().toString() + separator + levelStr + separator + targetClass.className + classSeparator + function + classSeparator + lineStr + separator + content + "\n"
+        let log: String = String.init(format: "%@%@%@%@%@%@%@%@%@%@%@\n", Date().toString(), separator, levelStr, separator, targetClass.className, classSeparator, function, classSeparator, lineStr, separator, content)
         print(log)
         return log
     }
@@ -81,7 +81,7 @@ extension Date {
     }
 }
 
-extension NSObject {
+@objc extension NSObject {
     var className: String {
         return String(describing: type(of: self)).components(separatedBy: ".").last!
     }
