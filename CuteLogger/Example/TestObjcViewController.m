@@ -24,11 +24,13 @@
 //    [log debugWithTargetClass:self.classForCoder content:@"测试Objc-log" :line :str];
 //    [[LogGenerator new] debugWithTargetClass:self.classForCoder content:[NSString stringWithFormat:@"%@", log] :(NSInteger)__LINE__ :[NSString stringWithFormat:@"%s", __FUNCTION__]];
     for (int i = 0; i < 30; i++) {
-        Cute_Debug(@"这是一个Debug - Log")
-        Cute_Info(@"这是一个info - Log")
-        Cute_Error(@"这是一个Error - Log")
-        Cute_Warning(@"这是一个 Warning - Log")
+//        Cute_Debug(@"这是一个Debug - Log")
+//        Cute_Info(@"这是一个info - Log")
+//        Cute_Error(@"这是一个Error - Log")
+//        Cute_Warning(@"这是一个 Warning - Log")
     }
+    
+    LogGenerator *obj = [[LogGenerator alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
